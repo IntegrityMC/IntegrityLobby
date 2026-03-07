@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 public class LobbyScoreboard implements SidebarAdapter {
     @Override
     public String getTitle(Player player) {
-        return Main.getSettings().getScoreboard().getTitle();
+        return PlaceholderAPI.setPlaceholders(player, Main.getSettings().getScoreboard().getTitle());
     }
 
     @Override
