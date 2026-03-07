@@ -1,0 +1,24 @@
+scoreboard:
+  enabled: true
+  command: false
+  title: "&c&lINTEGRITY"
+  lines:
+    - "Player: %player_name%"
+    - ""
+    - "play.test.it"
+
+join:
+  enabled: true
+  message:
+    - "Benventuto"
+
+motd:
+  enabled: true
+  message:
+    - "Benvenuto"
+
+quit:
+  enabled: true
+  message:
+    - "Ciao"
+

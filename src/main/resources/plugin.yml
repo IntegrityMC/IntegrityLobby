@@ -1,0 +1,7 @@
+name: IntegrityLobby
+version: '${version}'
+main: com.github.integritymc.integritylobby.Main
+api-version: '1.13'
+authors: [ItzFrancy]
+description: Lobby core
+depend: ["PlaceholderAPI"]
