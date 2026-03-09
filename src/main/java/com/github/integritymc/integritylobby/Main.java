@@ -8,6 +8,8 @@ package com.github.integritymc.integritylobby;
 
 import com.github.integritymc.integritylobby.config.Loader;
 import com.github.integritymc.integritylobby.config.Settings;
+import com.github.integritymc.integritylobby.listeners.JoinListener;
+import com.github.integritymc.integritylobby.listeners.QuitListener;
 import com.github.integritymc.integrityscoreboard.api.IntegrityScoreboard;
 import com.github.integritymc.integrityscoreboard.api.IntegrityScoreboardAPI;
 import lombok.Getter;
@@ -29,6 +31,10 @@ public final class Main extends JavaPlugin {
 
         //LOAD INTEGRITY SCOREBOARD API
         scoreboardAPI = IntegrityScoreboard.create(this).adapter(new LobbyScoreboard()).updateInterval(4L).autoManagePlayers(true).enable();
+
+        //REGISTER LISTENER
+        getServer().getPluginManager().registerEvents(new JoinListener(), this);
+        getServer().getPluginManager().registerEvents(new QuitListener(), this);
     }
 
     @Override
